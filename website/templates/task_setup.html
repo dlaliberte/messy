@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task Setup</title>
+    <link rel="stylesheet" href="/static/css/main.css">
+    <script src="/static/js/tensorflow.js"></script>
+    <script src="/static/js/neat.js"></script>
+    <script src="/static/js/task.js"></script>
+    <script src="/static/js/user_interface.js"></script>
+</head>
+<body>
+    <h1>Task Setup</h1>
+    <form id="task-setup-form">
+        <label for="task-name">Task Name:</label><br>
+        <input type="text" id="task-name" name="task-name"><br>
+        <label for="task-input">Task Input:</label><br>
+        <input type="text" id="task-input" name="task-input"><br>
+        <label for="task-evaluation">Task Evaluation:</label><br>
+        <input type="text" id="task-evaluation" name="task-evaluation"><br>
+        <input type="submit" value="Setup Task">
+    </form>
+    <script>
+        document.getElementById('task-setup-form').addEventListener('submit', function(event) {
+            event.preventDefault();
+            setupTask();
+        });
+    </script>
+</body>
+</html>
