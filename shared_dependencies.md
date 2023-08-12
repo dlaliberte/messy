@@ -1,24 +1,32 @@
 1. Exported Variables:
-   - `neuralNet`: The neural network object created in `neat.js` and used in `task.js` and `user_interface.js`.
-   - `taskList`: The list of tasks created in `task.js` and used in `user_interface.js` and `saved_tasks.html`.
+   - `neat`: The NEAT architecture from `neat.ts`.
+   - `neuron`: The neuron model from `neuron.ts`.
+   - `link`: The link model from `link.ts`.
+   - `genome`: The genome model from `genome.ts`.
+   - `species`: The species model from `species.ts`.
+   - `population`: The population model from `population.ts`.
+   - `innovation`: The innovation model from `innovation.ts`.
+   - `utils`: The utility functions from `utils.ts`.
 
 2. Data Schemas:
-   - `TaskSchema`: Used in `task.js`, `user_interface.js`, `saved_tasks.html`, and `database.py` to structure the tasks.
-   - `NeuralNetSchema`: Used in `neat.js`, `task.js`, and `database.py` to structure the neural network.
+   - `Task`: The task model schema from `Task.ts`.
+   - `NeuralNet`: The neural net model schema from `NeuralNet.ts`.
 
-3. ID Names of DOM Elements:
-   - `task-setup-form`: The form for setting up tasks in `task_setup.html` and used in `user_interface.js`.
-   - `task-evaluation-form`: The form for evaluating tasks in `task_evaluation.html` and used in `user_interface.js`.
-   - `saved-tasks-list`: The list of saved tasks in `saved_tasks.html` and used in `user_interface.js`.
+3. DOM Element IDs:
+   - `task-setup`: The task setup component from `TaskSetup.ts`.
+   - `task-evaluation`: The task evaluation component from `TaskEvaluation.ts`.
+   - `task-history`: The task history component from `TaskHistory.ts`.
+   - `neural-net-interaction`: The neural net interaction component from `NeuralNetInteraction.ts`.
 
 4. Message Names:
-   - `task-setup`: Message sent from `user_interface.js` to `task.js` when a new task is set up.
-   - `task-evaluation`: Message sent from `user_interface.js` to `task.js` when a task is evaluated.
-   - `task-save`: Message sent from `user_interface.js` to `database.py` when a task is saved.
+   - `taskCreated`: Message sent when a new task is created.
+   - `taskSelected`: Message sent when a task is selected from history.
+   - `neuralNetUpdated`: Message sent when the neural net is updated.
 
 5. Function Names:
-   - `setupTask()`: Function defined in `task.js` and called in `user_interface.js`.
-   - `evaluateTask()`: Function defined in `task.js` and called in `user_interface.js`.
-   - `saveTask()`: Function defined in `database.py` and called in `user_interface.js`.
-   - `loadTasks()`: Function defined in `database.py` and called in `user_interface.js`.
-   - `createNeuralNet()`: Function defined in `neat.js` and called in `task.js`.
+   - `createTask`: Function to create a new task in `TaskService.ts`.
+   - `selectTask`: Function to select a task from history in `TaskService.ts`.
+   - `updateNeuralNet`: Function to update the neural net in `NeuralNetService.ts`.
+   - `evaluateTask`: Function to evaluate a task in `TaskEvaluation.ts`.
+   - `saveTask`: Function to save a task in `TaskHistory.ts`.
+   - `interactWithNeuralNet`: Function to interact with the neural net in `NeuralNetInteraction.ts`.
